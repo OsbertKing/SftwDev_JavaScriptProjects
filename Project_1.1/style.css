@@ -1,0 +1,128 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppings', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,50,0.2),rgba(0,0,50,0.8)), url(bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form_box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form_box #title{
+    margin-bottom: 60px;
+    color: rgb(19, 19, 156);
+    font-size: 30px;
+    position: relative;
+    transition: all 1s;
+}
+.form_box #title.enable{
+    display: none;
+}
+
+.form_box #pasw_title{
+    margin-bottom: 60px;
+    color: rgb(19, 19, 156);
+    font-size: 30px;
+    position: relative;
+    transition: all 1s;
+    display: none;
+}
+
+.form_box #pasw_title.enable{
+    display: flex;
+}
+
+.form_box h1::after{
+    content: ' ';
+    width: 60px;
+    height: 4px;
+    background: rgb(19, 19, 156);
+    border-radius: 3px ;
+    position: absolute;
+    bottom: -12px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.input_field{
+    border-radius: 3px;
+    background: rgb(240, 235, 235);
+    margin: 15px 0;
+    display: flex;
+    align-items: baseline;
+    max-height: 65px;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+
+input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px  15px;
+}
+
+form p{
+    font-size: 15px;
+}
+
+form p a{
+    text-decoration: none;
+    border: none;
+    color: rgb(19, 19, 156);
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn_field{
+    margin-top: 30px ;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.btn_field button{
+    flex-basis: 48%;
+    background: rgb(19, 19, 156);
+    height: 40px;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    transition: background 1s;
+    cursor: pointer;
+}
+.btn_field #SignInBtn{
+    background: rgb(240, 235, 235);
+    color: black;
+
+}
+
+.btn_field #SignInBtn.enable{
+    background: rgb(19, 19, 156);
+    color: #fff;
+}
+
+.btn_field #SignUpBtn.disable{
+    background: rgb(240, 235, 235);
+    color: black;
+
+}

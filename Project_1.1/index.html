@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project_1.1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form_box">
+            <div class="h1">
+            <h1 id="title">Sign Up</h1>
+            <h1 id="pasw_title"> Forgot Password?</h1>
+        </div>
+            <form action="">
+               <div class="input_field" id="Name_field">
+                <input type="text" placeholder="Name">
+               </div>
+               <div class="input_field">
+                <input type="email" placeholder="Email">
+               </div>
+               <div class="input_field" id="pasw_field">
+                <input type="password" placeholder="Password">
+               </div>
+               <p id="fgt_text">Forgot Password? <a id="fgt_pasw">Click here</a></p>
+            </form>
+            <div class="btn_field">
+                <button class="signBtn" id="SignUpBtn">Sign Up</button>
+                <button class="signBtn" id="SignInBtn">Sign In</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var Name_field = document.getElementById('Name_field');
+        var SignUpBtn = document.getElementById('SignUpBtn');
+        var SignInBtn = document.getElementById('SignInBtn');
+        var title = document.getElementById('title');
+        var fgt_pasw = document.getElementById('fgt_pasw');
+        var pasw_title = document.getElementById('pasw_title');
+        var pasw_field = document.getElementById('pasw_field');
+        var fgt_text = document.getElementById('fgt_text');
+
+
+        SignInBtn.onclick = function(){
+            title.innerHTML = 'Sign In';
+            Name_field.style.maxHeight = '0';
+            SignInBtn.classList.add('enable');
+            SignUpBtn.classList.add('disable');
+        }
+
+        SignUpBtn.onclick = function(){
+            title.innerHTML = 'Sign Up';
+            Name_field.style.maxHeight = '65px';
+            SignInBtn.classList.remove('enable');
+            SignUpBtn.classList.remove('disable');
+        }
+
+        fgt_pasw.onclick = function(){
+            title.classList.add('enable');
+            pasw_title.classList.add('enable');
+            pasw_field.style.maxHeight = '0';
+            Name_field.style.maxHeight = '0';
+            SignInBtn.innerHTML = 'Back';
+            SignUpBtn.innerHTML = 'Submit';
+            fgt_text.innerHTML = 'Input User Email';
+
+            SignUpBtn.onclick = function(){
+                
+                fgt_text.innerHTML = 'Please provide code sent to the email';
+            }
+            SignInBtn.onclick = function(){
+               window.location.reload()
+            }
+
+        }
+    </script>
+</body>
+</html>
